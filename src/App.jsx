@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     const getUsers = async () => {
-      const { data } = await axios("https://integracion-backend.onrender.com/");
+      const { data } = await axios(import.meta.env.VITE_API);
 
       setUsers(data);
     };
